@@ -33,7 +33,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Mostrar variables de entorno
-        run: echo "esta es la env var platform:" $platform
+        run: | 
+          echo "esta es la var de entorno platform:" $platform
+          echo "esta es la var de entorno  region: ${{env.platform}}"
 
       - name: "Mostrar msg"
         run:
